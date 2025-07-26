@@ -1365,10 +1365,11 @@
         
         // Page 4: Contact Functionality
         function sendLoveEmail() {
+            const recipient = 'teniopemipo@gmail.com';
             const subject = encodeURIComponent('I love you too! 💕');
-            const body = encodeURIComponent('My dearest love,\n\nYour beautiful website touched my heart deeply. I love you too, more than words can express. Thank you for this magical journey through your feelings.\n\nWith all my love,\n[Your name] 💖');
+            const body = encodeURIComponent('My love,\n\n(Tell me what you think/feel right now).\nAdekunbi Kafilat Awoleke. 💖');
             
-            window.open(`mailto:?subject=${subject}&body=${body}`, '_blank');
+            window.open(`mailto:${recipient}?subject=${subject}&body=${body}`, '_blank');
             createMegaCelebration();
         }
         
