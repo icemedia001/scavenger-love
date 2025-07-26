@@ -1,0 +1,9 @@
+# Exclude setup and guide files
+SETUP_FOR_MAXIMUM_IMPACT.md
+SPOTIFY_PLAYLIST_GUIDE.md
+
+# Common files to ignore
+.DS_Store
+*.log
+node_modules/
+.env 
