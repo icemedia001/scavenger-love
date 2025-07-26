@@ -566,28 +566,26 @@
             
             /* Page 3 - Playlist smaller */
             .page:nth-of-type(4) .container > div {
-                padding: 1.5rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-            .page:nth-of-type(4) .container > div > div:first-child {
+                padding: 1.8rem !important;
                 margin-bottom: 2rem !important;
             }
             .page:nth-of-type(4) .container > div > div:first-child p:first-child {
-                font-size: 1.1rem !important;
-                line-height: 1.2 !important;
+                font-size: 1.4rem !important;
             }
             .page:nth-of-type(4) .container > div > div:first-child p:last-child {
-                font-size: 0.8rem !important;
-            }
-            .page:nth-of-type(4) .container > div > div:last-child {
-                margin-top: 2rem !important;
-                padding: 1.5rem !important;
-            }
-            .page:nth-of-type(4) .container > div > div:last-child i {
-                font-size: 1.5rem !important;
+                font-size: 0.95rem !important;
             }
             .page:nth-of-type(4) .container > div > div:last-child p {
-                font-size: 1rem !important;
+                font-size: 1.1rem !important;
+            }
+            
+            /* Spotify button mobile */
+            .page:nth-of-type(4) .container > div > div:last-child {
+                margin-top: 1.5rem !important;
+            }
+            .page:nth-of-type(4) .container > div > div:last-child .magic-button {
+                padding: 0.8rem 1.3rem !important;
+                font-size: 0.85rem !important;
             }
             
             /* Playlist items - smaller */
@@ -846,6 +844,15 @@
                     <i class="fas fa-heart" style="font-size: 1.8rem; color: #d946ef; margin-bottom: 1rem;"></i>
                     <p style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 500;">Each melody carries a piece of my soul to yours 🎵</p>
                 </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <div class="magic-button" onclick="openSpotifyPlaylist()" style="background: linear-gradient(45deg, #1db954, #1ed760) !important; display: inline-flex !important;">
+                        <span><i class="fab fa-spotify" style="margin-right: 0.5rem;"></i> Listen on Spotify 🎵</span>
+                        <div class="magic-sparkles">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="magic-button" onclick="nextPage()">
@@ -877,8 +884,8 @@
                         </div>
                     </div>
                     
-                    <div class="magic-button" onclick="sendLoveText()" style="background: linear-gradient(45deg, #3b82f6, #1d4ed8) !important;">
-                        <span><i class="fas fa-sms"></i> Text: "I love you too" 📱</span>
+                    <div class="magic-button" onclick="sendLoveText()" style="background: linear-gradient(45deg, #25d366, #128c7e) !important;">
+                        <span><i class="fab fa-whatsapp"></i> WhatsApp: "I love you too" 💚</span>
                         <div class="magic-sparkles">
                             <span></span><span></span><span></span><span></span><span></span>
                         </div>
@@ -1366,10 +1373,8 @@
         }
         
         function sendLoveText() {
-            const message = encodeURIComponent('I love you too! 💕 Your beautiful love website touched my heart. Thank you for this magical journey. 💖');
-            
-            // Try to open SMS (works on mobile)
-            window.open(`sms:?body=${message}`, '_blank');
+            const whatsappUrl = 'https://wa.link/2mgrm9';
+            window.open(whatsappUrl, '_blank');
             createMegaCelebration();
         }
         
@@ -1392,6 +1397,12 @@
                     setTimeout(() => element.remove(), 4000);
                 }, i * 50);
             }
+        }
+
+        function openSpotifyPlaylist() {
+            const spotifyUrl = 'https://open.spotify.com/playlist/4yrCCDJyFO64VCnnY3fgyY?si=a7fb4d6824d24cac';
+            window.open(spotifyUrl, '_blank');
+            createMegaCelebration();
         }
         
         // Music Toggle
