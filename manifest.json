@@ -1,10 +1,10 @@
 {
-  "name": "Scavenger Love - A Journey",
-  "short_name": "Our Love",
+  "name": "Where Love Led Me - A Journey",
+  "short_name": "Love Journey",
   "description": "A beautiful romantic journey through our love story",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffeef8",
+  "background_color": "#fefcf3",
   "theme_color": "#d946ef",
   "orientation": "portrait",
   "icons": [
